@@ -20,7 +20,7 @@ class LoginSpider(scrapy.Spider):
                           callback=self.parse_after_login)
 
     def parse_after_login(self, response):
-       # open_in_browser(response)
+       open_in_browser(response)
 
-        if response.xpath('//a[text()="Logout"]'):
-            self.log('You logged in!')
+        # if response.xpath('//a[text()="Logout"]'):
+        #     self.log('You logged in!')
