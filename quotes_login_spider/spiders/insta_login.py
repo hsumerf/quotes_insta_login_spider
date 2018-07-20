@@ -27,7 +27,7 @@ class InstaLoginSpider(scrapy.Spider):
         BASE_URL = 'http://www.instagram.com'
         url_login = BASE_URL + '/accounts/login/'
         user_login = 'h.s.umer.farooq@gmail.com'
-        user_password = '****'
+        user_password = 'password'
         user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
         # session = requests.Session()
         # session.headers = {'user-agent':USER_AGENT}
@@ -87,7 +87,7 @@ class InstaLoginSpider(scrapy.Spider):
             finder = r.text.find(user_login)
             print(finder)
             print(r.url)
-            print(r.content)
+            print(r.text)
             open_in_browser(response)
 
         #     if finder != -1:
